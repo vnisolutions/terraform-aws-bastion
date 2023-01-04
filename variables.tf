@@ -38,11 +38,11 @@ variable "ssh_key_bastion" {
 variable "sg_ingress" {
   description = "The ID of the VPC in which the endpoint will be used"
   type        = list(string)
-  default = null
+  default     = null
 }
 
 variable "cidr_ingress" {
   description = "The ID of the VPC in which the endpoint will be used"
   type        = list(string)
-  default = null
+  default     = null
 }

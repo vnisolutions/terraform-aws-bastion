@@ -12,19 +12,19 @@ resource "aws_instance" "bastion-host" {
   }
 
   tags = {
-      Name  = "${var.env}-${var.project_name}-bastion"
-      Environment = "${var.env}"
-      Management  = "terraform"
+    Name        = "${var.env}-${var.project_name}-bastion"
+    Environment = "${var.env}"
+    Management  = "terraform"
   }
 }
 
 resource "aws_eip" "bastion_eip" {
-  vpc      = true
+  vpc = true
 
   tags = {
-      Name  = "${var.env}-${var.project_name}-bastion"
-      Environment = "${var.env}"
-      Management  = "terraform"
+    Name        = "${var.env}-${var.project_name}-bastion"
+    Environment = "${var.env}"
+    Management  = "terraform"
   }
 }
 
@@ -68,8 +68,8 @@ resource "aws_security_group" "sg-bastion" {
   ]
 
   tags = {
-      Name  = "${var.env}-${var.project_name}-bastion-sg"
-      Environment = "${var.env}"
-      Management  = "terraform"
+    Name        = "${var.env}-${var.project_name}-bastion-sg"
+    Environment = "${var.env}"
+    Management  = "terraform"
   }
 }
