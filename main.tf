@@ -19,7 +19,6 @@ resource "aws_instance" "bastion-host" {
 }
 
 resource "aws_eip" "bastion_eip" {
-  vpc = true
 
   tags = {
     Name        = "${var.env}-${var.project_name}-bastion"
